@@ -1,12 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Platinum Returns of Market</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Platinum Returns of Market</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#07111f;color:#eef4ff}
+header{height:72px;background:#0b1728;border-bottom:1px solid #263750;display:flex;align-items:center;justify-content:space-between;padding:0 6%;position:sticky;top:0;z-index:10}
+.logo{font-size:20px;font-weight:800;color:#e7c56a}.logo span{color:#fff}
+nav a{color:#b8c4d8;text-decoration:none;margin-left:25px;font-size:14px}
+nav a:hover{color:#e7c56a}
+.hero{padding:70px 6% 45px;background:radial-gradient(circle at 80% 20%,#17345c 0,#07111f 48%)}
+.badge{display:inline-block;border:1px solid #806b37;color:#e7c56a;padding:7px 12px;border-radius:20px;font-size:12px;margin-bottom:20px}
+h1{font-size:clamp(36px,6vw,68px);max-width:850px;line-height:1.02}
+.hero p{max-width:650px;color:#aebbd0;font-size:17px;line-height:1.7;margin:22px 0}
+.btn{display:inline-block;background:#e7c56a;color:#08111e;padding:13px 20px;border-radius:8px;text-decoration:none;font-weight:700;margin-right:10px}
+.btn.dark{background:#13243b;color:#fff;border:1px solid #30435e}
+.container{width:88%;max-width:1250px;margin:auto}
+section{padding:48px 0}
+.title{font-size:28px;margin-bottom:22px}.muted{color:#8e9db4}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.card{background:#0d1a2c;border:1px solid #263750;border-radius:13px;padding:19px;transition:.2s}
+.card:hover{transform:translateY(-3px);border-color:#8f783f}
+.symbol{color:#91a2ba;font-size:12px}.price{font-size:23px;font-weight:700;margin:10px 0}.up{color:#42d39a}.down{color:#ff6978}
+.dashboard{display:grid;grid-template-columns:2fr 1fr;gap:18px}
+.chart{height:330px;position:relative;overflow:hidden}
+.chart svg{width:100%;height:100%}
+.stats{display:grid;gap:12px}
+.stat strong{font-size:24px;display:block;margin-top:8px}
+table{width:100%;border-collapse:collapse;background:#0d1a2c;border-radius:12px;overflow:hidden}
+th,td{text-align:left;padding:15px;border-bottom:1px solid #22334c;font-size:14px}
+th{color:#8495ad;font-weight:500}
+.pricebox{font-size:27px;font-weight:800}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feature{padding:25px;background:#0d1a2c;border:1px solid #263750;border-radius:14px}
+.feature h3{margin-bottom:10px}.feature p{color:#95a4b9;line-height:1.6}
+footer{border-top:1px solid #263750;padding:30px 6%;color:#7f90a8;display:flex;justify-content:space-between}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.dashboard,.features{grid-template-columns:1fr}}
+@media(max-width:600px){header{padding:0 4%}nav{display:none}.hero{padding:55px 5% 35px}.container{width:90%}.grid{grid-template-columns:1fr 1fr}table{font-size:12px}.card{padding:14px}.price{font-size:19px}}
+</style>
 </head>
 <body>
-  <h1>Platinum Returns of Market</h1>
-  <p>Professional Market Intelligence Platform</p>
-</body>
-</html>
+
+<header>
+  <div class="logo">PLATINUM <span>RETURNS</span></div>
+  <nav>
+    <a href="#markets">Markets</a>
+    <a href="#research">Research</a>
+    <a href="#plans">Plans</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="badge">MARKET INTELLIGENCE • PREMIUM RESEARCH</div>
+    <h1>See the market.<br><span style="color:#e7c56a">Think beyond</span> the noise.</h1>
+    <p>Professional market intelligence for investors and traders covering Indian indices, gold, digital assets and strategic research.</p>
+    <a class="btn" href="#markets">Explore Markets</a>
+    <a class="btn dark" href="#plans">View Premium</a>
+  </div>
+</section>
+
+<section id="markets">
+<div class="container">
+<h2 class="title">Market Overview</h2>
+<p class="muted" style="margin-bottom:20px">Indicative dashboard • prices shown for interface demonstration</p>
+
+<div class="grid">
+<div class="card"><div class="symbol">NIFTY 50</div><div class="price">24,890.25</div><div class="up">▲ +0.72%</div></div>
+<div class="card"><div class="symbol">BANK NIFTY</div><div class="price">56,420.80</div><div class="up">▲ +0.48%</div></div>
+<div class="card"><div class="symbol">SENSEX</div><div class="price">81,650.30</div><div class="up">▲ +0.61%</div></div>
+<div class="card"><div class="symbol">XAUUSD</div><div class="price">$3,385.40</div><div class="up">▲ +0.34%</div></div>
+<div class="card"><div class="symbol">BTCUSD</div><div class="price">$118,420</div><div class="down">▼ -0.28%</div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container dashboard">
+<div class="card chart">
+<h2 class="title">Market Trend</h2>
+<svg viewBox="0 0 800 250" preserveAspectRatio="none">
+<defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#e7c56a" stop-opacity=".35"/><stop offset="1" stop-color="#e7c56a" stop-opacity="0"/></linearGradient></defs>
+<path d="M0 205 L70 190 L130 200 L190 150 L250 165 L320 125 L380 145 L440 92 L510 115 L570 75 L640 92 L700 48 L800 65 L800 250 L0 250Z" fill="url(#g)"/>
+<polyline points="0,205 70,190 130,200 190,150 250,165 320,125 380,145 440,92 510,115 570,75 640,92 700,48 800,65" fill="none" stroke="#e7c56a" stroke-width="4"/>
+</svg>
+</div>
+
+<div class="stats">
+<div class="card"><span class="muted">Market Mood</span><strong class="up">Bullish</strong></div>
+<div class="card"><span class="muted">Research Calls</span><strong>24</strong></div>
+<div class="card"><span class="muted">Risk Level</span><strong>Moderate</strong></div>
+</div>
+</div>
+</section>
+
+<section id="research">
+<div class="container">
+<h2 class="title">Latest Research</h2>
+<table>
+<tr><th>Asset</th><th>View</th><th>Bias</th><th>Risk</th></tr>
+<tr><td>NIFTY 50</td><td>Trend continuation</td><td class="up">Bullish</td><td>Medium</td></tr>
+<tr><td>XAUUSD</td><td>Safe-haven strength</td><td class="up">Positive</td><td>Medium</td></tr>
+<tr><td>BTCUSD</td><td>Momentum watch</td><td>Neutral</td><td>High</td></tr>
+<tr><td>BANK NIFTY</td><td>Breakout zone</td><td class="up">Positive</td><td>Medium</td></tr>
+</table>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="title">What We Provide</h2>
+<div class="features">
+<div class="feature"><h3>Market Intelligence</h3><p>
