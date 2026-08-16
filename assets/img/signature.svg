@@ -1,0 +1,12 @@
+<svg width="360" height="120" viewBox="0 0 360 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sigGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8E8B6"/>
+      <stop offset="30%" stop-color="#D0A95E"/>
+      <stop offset="70%" stop-color="#F1D78E"/>
+      <stop offset="100%" stop-color="#9C6C1D"/>
+    </linearGradient>
+  </defs>
+  <path d="M25 68C65 28 98 18 135 44C171 70 180 99 221 67C248 43 286 30 334 47" stroke="url(#sigGold)" stroke-width="4" stroke-linecap="round"/>
+  <text x="25" y="92" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="url(#sigGold)" font-weight="700">Amit Chaudhary</text>
+</svg>

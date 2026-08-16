@@ -1,236 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Platinum Returns | Market Intelligence</title>
-
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#07111f;
-  color:#f5f7fa;
-  line-height:1.6;
-}
-a{text-decoration:none;color:inherit}
-
-nav{
-  position:sticky;top:0;z-index:100;
-  background:rgba(7,17,31,.94);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid #1d3047;
-}
-.nav{
-  max-width:1150px;margin:auto;
-  padding:18px 22px;
-  display:flex;align-items:center;justify-content:space-between;
-}
-.logo{
-  font-size:20px;font-weight:800;
-  letter-spacing:.5px;
-}
-.logo span{color:#d9b45b}
-.navlinks{display:flex;gap:25px;font-size:14px;color:#aebbd0}
-.navlinks a:hover{color:#fff}
-
-.hero{
-  max-width:1150px;margin:auto;
-  padding:95px 22px 80px;
-  display:grid;grid-template-columns:1.2fr .8fr;
-  gap:50px;align-items:center;
-}
-.badge{
-  display:inline-block;
-  border:1px solid #66552a;
-  background:#17160f;
-  color:#e2c66d;
-  padding:7px 13px;border-radius:30px;
-  font-size:12px;font-weight:bold;
-  margin-bottom:20px;
-}
-h1{
-  font-size:clamp(42px,6vw,72px);
-  line-height:1.02;
-  letter-spacing:-2px;
-}
-.gold{color:#dfbd61}
-.hero p{
-  margin:25px 0;
-  color:#aebbd0;
-  max-width:650px;
-  font-size:18px;
-}
-.buttons{display:flex;gap:13px;flex-wrap:wrap}
-.btn{
-  padding:13px 20px;border-radius:9px;
-  font-weight:bold;font-size:14px;
-}
-.primary{background:#d9b45b;color:#07111f}
-.secondary{border:1px solid #33465e;color:#fff}
-
-.panel{
-  border:1px solid #243852;
-  background:linear-gradient(145deg,#0d1b2d,#091421);
-  border-radius:18px;padding:25px;
-  box-shadow:0 20px 60px rgba(0,0,0,.25);
-}
-.panel-title{color:#8798af;font-size:13px;margin-bottom:15px}
-.market{
-  display:flex;justify-content:space-between;
-  padding:16px 0;border-bottom:1px solid #203148;
-}
-.market:last-child{border-bottom:0}
-.market strong{display:block}
-.up{color:#50d890}.neutral{color:#e1c86b}
-
-section{padding:75px 22px}
-.container{max-width:1150px;margin:auto}
-.section-title{
-  font-size:34px;margin-bottom:12px;
-}
-.section-sub{color:#8fa0b8;margin-bottom:35px}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-.card{
-  background:#0b1929;
-  border:1px solid #1e334c;
-  border-radius:15px;padding:25px;
-}
-.icon{
-  width:42px;height:42px;
-  display:grid;place-items:center;
-  border-radius:10px;
-  background:#1b1b13;color:#e1c36b;
-  margin-bottom:18px;font-weight:bold;
-}
-.card h3{margin-bottom:8px}
-.card p{color:#8fa0b8;font-size:14px}
-
-table{
-  width:100%;border-collapse:collapse;
-  background:#0b1929;
-  border:1px solid #20364f;
-  border-radius:14px;overflow:hidden;
-}
-th,td{
-  padding:17px;text-align:left;
-  border-bottom:1px solid #20364f;
-  font-size:14px;
-}
-th{color:#9eacc0;background:#0e2034}
-td{color:#dce3eb}
-tr:last-child td{border-bottom:0}
-
-.cta{
-  text-align:center;
-  border:1px solid #4c4122;
-  background:linear-gradient(135deg,#17170f,#0b1929);
-  border-radius:20px;padding:55px 25px;
-}
-.cta p{color:#9eacc0;margin:12px auto 25px;max-width:650px}
-
-footer{
-  border-top:1px solid #1d3047;
-  padding:30px 22px;color:#718198;
-  font-size:13px;
-}
-.footer{
-  max-width:1150px;margin:auto;
-  display:flex;justify-content:space-between;gap:20px;
-}
-
-@media(max-width:800px){
-  .navlinks{display:none}
-  .hero{grid-template-columns:1fr;padding-top:65px}
-  .cards{grid-template-columns:1fr}
-  h1{letter-spacing:-1px}
-  table{
-}
-}
-</style>
-</head>
-<body>
-
-<header>
-  <div class="container">
-    <nav>
-      <strong>PLATINUM RETURNS</strong>
-      <div class="navlinks">
-        <a href="#market">Market</a>
-        <a href="#research">Research</a>
-        <a href="#services">Services</a>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero">
-    <div class="container">
-      <p class="eyebrow">MARKET INTELLIGENCE PLATFORM</p>
-      <h1>Professional Market Intelligence for Smarter Decisions</h1>
-      <p class="cta">Research-driven insights across equities, crypto, commodities and global markets.</p>
-      <a href="#research" class="button">Explore Research</a>
-    </div>
-  </section>
-
-  <section id="market">
-    <div class="container">
-      <h2 class="title">Market Intelligence</h2>
-      <div class="cards">
-        <div class="feature">
-          <h3>Global Markets</h3>
-          <p>Track major market trends, momentum and opportunities.</p>
-        </div>
-        <div class="feature">
-          <h3>Risk Analysis</h3>
-          <p>Understand market risk with clear, structured analysis.</p>
-        </div>
-        <div class="feature">
-          <h3>Strategic Insights</h3>
-          <p>Research designed to support better investment decisions.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLATINUM RETURN OF MARKET | Premium Forex, Crypto, Gold & Market Analysis</title>
+    <meta name="description" content="PLATINUM RETURN OF MARKET provides premium market insights, technical analysis, trading education and financial market research across Forex, Crypto, Gold and global indices." />
+    <meta property="og:title" content="PLATINUM RETURN OF MARKET" />
+    <meta property="og:description" content="Professional market insights, technical analysis and trading education across global financial markets." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/logo.svg" />
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container navbar">
+        <a href="index.html" class="brand" aria-label="PLATINUM RETURN OF MARKET home">
+          <img class="brand-mark" src="assets/img/logo.svg" alt="PLATINUM RETURN OF MARKET logo" />
+          <span class="brand-wordmark"><strong>PLATINUM</strong> RETURN OF MARKET</span>
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="markets.html">Markets</a></li>
+            <li><a href="forex.html">Forex</a></li>
+            <li><a href="crypto.html">Crypto</a></li>
+            <li><a href="gold.html">Gold</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="premium.html">Premium</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn-secondary" href="login.html">Login</a>
+          <a class="btn btn-secondary" href="register.html">Register</a>
+          <a class="btn btn-primary" href="appointment.html">Book Appointment</a>
+          <button class="btn btn-secondary menu-toggle" aria-label="Toggle menu">☰</button>
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <section id="research">
-    <div class="container">
-      <h2 class="title">Latest Research</h2>
-      <table>
-        <tr><th>Asset</th><th>View</th><th>Bias</th><th>Risk</th></tr>
-        <tr><td>NIFTY 50</td><td>Trend continuation</td><td>Bullish</td><td>Medium</td></tr>
-        <tr><td>XAUUSD</td><td>Safe-haven strength</td><td>Positive</td><td>Medium</td></tr>
-        <tr><td>BTCUSD</td><td>Momentum watch</td><td>Neutral</td><td>High</td></tr>
-        <tr><td>BANK NIFTY</td><td>Breakout zone</td><td>Positive</td><td>Medium</td></tr>
-      </table>
-    </div>
-  </section>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Institutional market research</span>
+            <h1>PLATINUM <span class="gold-text">RETURN OF MARKET</span></h1>
+            <p class="gold-text" style="font-size:1.2rem; font-weight:600; margin-top:14px;">The world is how we shape it</p>
+            <p>Professional market insights, technical analysis, trading ideas and educational resources across Forex, Crypto, Gold, Indices and global financial markets.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="markets.html">Explore Markets</a>
+              <a class="btn btn-secondary" href="appointment.html">Book a Consultation</a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-box"><strong class="gold-text">24/7</strong><span>Market coverage</span></div>
+              <div class="stat-box"><strong class="gold-text">8+</strong><span>Asset classes</span></div>
+              <div class="stat-box"><strong class="gold-text">Global</strong><span>Macro view</span></div>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="Market overview visual">
+            <div class="market-panel">
+              <div class="chart-card">
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                  <strong>XAU/USD</strong>
+                  <span class="status-pill status-live">Live</span>
+                </div>
+                <div class="chart-surface">
+                  <svg class="chart-svg" viewBox="0 0 340 110" preserveAspectRatio="none">
+                    <g>
+                      <line x1="0" y1="100" x2="340" y2="100" class="grid-line" />
+                      <line x1="0" y1="70" x2="340" y2="70" class="grid-line" />
+                      <line x1="0" y1="40" x2="340" y2="40" class="grid-line" />
+                      <path d="M 0 80 L 30 68 L 58 62 L 90 58 L 125 64 L 155 52 L 190 41 L 230 48 L 290 34 L 340 28" class="gold-line"/>
+                      <path d="M 0 80 L 30 68 L 58 62 L 90 58 L 125 64 L 155 52 L 190 41 L 230 48 L 290 34 L 340 28 L 340 100 L 0 100 Z" class="fill-area"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="market-grid">
+                <div class="mini-tile">
+                  <div class="mini-label">EUR/USD</div>
+                  <div class="mini-value">1.0852</div>
+                  <div class="mini-change up">+0.13%</div>
+                </div>
+                <div class="mini-tile">
+                  <div class="mini-label">BTC/USD</div>
+                  <div class="mini-value">$64.3K</div>
+                  <div class="mini-change up">+1.33%</div>
+                </div>
+                <div class="mini-tile">
+                  <div class="mini-label">NIFTY 50</div>
+                  <div class="mini-value">24,890</div>
+                  <div class="mini-change up">+0.48%</div>
+                </div>
+                <div class="mini-tile">
+                  <div class="mini-label">NASDAQ</div>
+                  <div class="mini-value">18,362</div>
+                  <div class="mini-change up">+0.42%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <section id="services">
-    <div class="container">
-      <h2 class="title">What We Provide</h2>
-      <div class="cards">
-        <div class="feature"><h3>Market Intelligence</h3><p>Clear market research and actionable insights.</p></div>
-        <div class="feature"><h3>Research Reports</h3><p>Structured analysis across multiple asset classes.</p></div>
-        <div class="feature"><h3>Risk Perspective</h3><p>Balanced views of opportunities and market risks.</p></div>
+      <section class="section">
+        <div class="container">
+          <div class="section-headline">
+            <div>
+              <span class="eyebrow">Market highlights</span>
+              <h2>Structured insights across global markets</h2>
+            </div>
+          </div>
+          <div class="grid-3">
+            <article class="feature-card">
+              <div class="icon">📊</div>
+              <h3>Market analysis</h3>
+              <p>Technical and macro-based overview across currencies, commodities, crypto, indices and major global themes.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon">🧠</div>
+              <h3>Trading education</h3>
+              <p>Clear educational resources covering risk management, chart behaviour, fundamentals and disciplined decision-making.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon">🛡️</div>
+              <h3>Risk-first perspective</h3>
+              <p>Our approach emphasizes structure, context and risk awareness, not promises of returns or guaranteed outcomes.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-headline">
+            <div>
+              <span class="eyebrow">Live dashboard preview</span>
+              <h2>Market overview</h2>
+            </div>
+            <p>Market data may be delayed depending on the data provider.</p>
+          </div>
+          <div class="table-card pad">
+            <div class="table-wrap">
+              <table class="market-table" aria-label="Market overview table">
+                <thead>
+                  <tr>
+                    <th>Asset</th>
+                    <th>Current Price</th>
+                    <th>Change</th>
+                    <th>% Change</th>
+                    <th>Market Status</th>
+                  </tr>
+                </thead>
+                <tbody id="market-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-headline">
+            <div>
+              <span class="eyebrow">What we focus on</span>
+              <h2>Core market coverage</h2>
+            </div>
+          </div>
+          <div class="grid-4" id="market-card-grid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-headline">
+            <div>
+              <span class="eyebrow">Member access</span>
+              <h2>Premium platform</h2>
+            </div>
+          </div>
+          <div class="plans">
+            <div class="plan-card featured">
+              <span class="tag">Popular</span>
+              <h3>Premium Membership</h3>
+              <div class="plan-price">₹47,000 <small>/ 1 Month</small></div>
+              <ul class="check-list">
+                <li>Premium market analysis</li>
+                <li>Forex, Crypto, Gold and Index insights</li>
+                <li>Trading ideas and educational resources</li>
+                <li>Latest market news and premium dashboard</li>
+              </ul>
+              <div class="form-actions"><a class="btn btn-primary" href="premium.html">View Pricing</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <img src="assets/img/logo.svg" alt="PLATINUM RETURN OF MARKET logo" style="width:170px;" />
+            <p style="margin-top:16px;">PLATINUM RETURN OF MARKET</p>
+            <p style="margin-top:8px;">The world is how we shape it</p>
+          </div>
+          <div>
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="markets.html">Markets</a></li>
+              <li><a href="analysis.html">Analysis</a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="education.html">Education</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Account</h3>
+            <ul class="footer-links">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+              <li><a href="dashboard.html">Premium Dashboard</a></li>
+              <li><a href="appointment.html">Book Appointment</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <ul class="footer-links">
+              <li>+91 788 037 4094</li>
+              <li>platinumreturnofmarket@gmail.com</li>
+              <li>19, Dehradun Rd, Opp. Panacea Hospital, Adarsh Gram, Rishikesh, Uttarakhand 249201, India</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 PLATINUM RETURN OF MARKET</span>
+          <div>
+            <a href="terms.html">Terms & Conditions</a> · 
+            <a href="privacy.html">Privacy Policy</a> · 
+            <a href="risk.html">Risk Disclosure</a> · 
+            <a href="refund.html">Refund/Cancellation Policy</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
+    </footer>
 
-<footer>
-  <div class="footer">
-    <span>© 2026 Platinum Returns</span>
-    <span>Professional Market Intelligence</span>
-  </div>
-</footer>
-
-</body>
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>
