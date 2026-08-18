@@ -64,7 +64,10 @@
               <span class="eyebrow">Leadership</span>
               <h2>Amit Chaudhary</h2>
               <p style="margin-top:10px; font-weight:600; color: var(--gold-bright);">Chief Executive Officer</p>
-              <img src="assets/img/signature.svg" alt="Amit Chaudhary signature" style="width:260px; margin:18px 0;" />
+              <div id="ceo-photo-container" style="margin: 18px 0; max-width: 300px;">
+                <img id="ceo-photo" src="" alt="Amit Chaudhary" style="width: 100%; border-radius: 12px; display: none;" />
+                <img src="assets/img/signature.svg" id="ceo-signature" alt="Amit Chaudhary signature" style="width:260px; margin:18px 0;" />
+              </div>
               <p>“Discipline, analysis and informed decisions are the foundation of a sustainable approach to financial markets.”</p>
             </article>
             <article class="feature-card pad">
@@ -90,5 +93,24 @@
     </footer>
 
     <script src="assets/js/app.js"></script>
+    <script>
+      // Load CEO photo if it exists
+      document.addEventListener('DOMContentLoaded', () => {
+        const photoImg = document.querySelector('#ceo-photo');
+        const signatureImg = document.querySelector('#ceo-signature');
+        
+        if (photoImg && signatureImg) {
+          photoImg.onload = () => {
+            photoImg.style.display = 'block';
+            signatureImg.style.display = 'none';
+          };
+          photoImg.onerror = () => {
+            photoImg.style.display = 'none';
+            signatureImg.style.display = 'block';
+          };
+          photoImg.src = 'assets/img/ceo-photo.jpg?t=' + Date.now();
+        }
+      });
+    </script>
   </body>
 </html>

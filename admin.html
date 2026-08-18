@@ -64,6 +64,19 @@
             <h3>Transactions</h3>
             <p>Secure payment records include transaction ID, plan, amount, date and payment status.</p>
           </article>
+          <article class="feature-card pad">
+            <span class="eyebrow">Content</span>
+            <h3>CEO Photo Upload</h3>
+            <form id="ceo-upload-form" style="margin-top: 18px;">
+              <div style="margin-bottom: 18px;">
+                <label for="ceo-photo" style="display: block; margin-bottom: 10px; font-weight: 600;">Select CEO Photo</label>
+                <input type="file" id="ceo-photo" name="photo" accept="image/*" required style="display: block; width: 100%; padding: 10px; border: 1px solid var(--gray-light); border-radius: 8px;" />
+              </div>
+              <div id="upload-preview" style="margin: 18px 0; max-width: 200px;"></div>
+              <div id="upload-status" style="margin-bottom: 18px;"></div>
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 10px;">Upload CEO Photo</button>
+            </form>
+          </article>
         </div>
       </section>
     </main>

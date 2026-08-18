@@ -263,6 +263,58 @@ function initChartTabs() {
   });
 }
 
+function initCEOPhotoUpload() {
+  const form = document.querySelector('#ceo-upload-form');
+  const fileInput = document.querySelector('#ceo-photo');
+  const preview = document.querySelector('#upload-preview');
+  const statusDiv = document.querySelector('#upload-status');
+
+  if (!form || !fileInput) return;
+
+  fileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file && preview) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        preview.innerHTML = `<img src="${event.target.result}" alt="Preview" style="width: 100%; border-radius: 8px;" />`;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const file = fileInput.files[0];
+    if (!file) {
+      if (statusDiv) statusDiv.innerHTML = '<p style="color: var(--danger-red);">Please select a file</p>';
+      return;
+    }
+
+    if (statusDiv) statusDiv.innerHTML = '<p>Uploading...</p>';
+
+    const formData = new FormData();
+    formData.append('photo', file);
+
+    try {
+      const response = await fetch('/api/upload-ceo-photo', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        if (statusDiv) statusDiv.innerHTML = '<p style="color: var(--success-green);">✓ CEO photo uploaded successfully!</p>';
+        fileInput.value = '';
+        if (preview) preview.innerHTML = '';
+      } else {
+        if (statusDiv) statusDiv.innerHTML = `<p style="color: var(--danger-red);">Error: ${result.error}</p>`;
+      }
+    } catch (error) {
+      if (statusDiv) statusDiv.innerHTML = `<p style="color: var(--danger-red);">Upload failed: ${error.message}</p>`;
+    }
+  });
+}
+
 function initPageDefaults() {
   renderMarketTable();
   renderMarketCards();
@@ -272,6 +324,7 @@ function initPageDefaults() {
   renderDashboard();
   initMarketFilters();
   initChartTabs();
+  initCEOPhotoUpload();
 }
 
 document.addEventListener('DOMContentLoaded', initPageDefaults);

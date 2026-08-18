@@ -1,0 +1,7 @@
+{
+  "name": "platinum-return-of-market",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  }
+}
